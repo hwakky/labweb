@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+/*Give the <body> element a background of #bda464*/
+body{
+    background-color: #bda464;
+}
+
+/*Make the <h1> elements blue*/
+h1{
+    color: blue;
+}
+
+/*Paragraph background to orange*/
+p{
+    background-color: orange;
+}
+
+/*Make all <h3> have 5px red solid border*/
+h3{
+    border: 5px red solid;
+}
+
+/*Give everything with <abbr> bold and underlined*/
+abbr {
+    font-weight: bold;
+    text-decoration: underline
+    /* border-bottom: 2px dotted #000; */
+}
+
+/*Give elements with class "explanation" red*/
+.explanation{
+    color: red;
+}
+
+/*Give <p> in id "zen-benefits" pink background*/
+#zen-benefits p {
+    background-color: pink;
+}
+
+/*Give <em> inside <p> red and bold*/
+p em{
+    color: red;
+    font-weight: bold;
+}
+
+/* Change to body font to any google font as you like */
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Make all <li> elements in the shade of hexadecimal blue*/
+li {
+    color: #0000ff;
+}
+
+/*Make <li> adjacent to <h2> red background*/
+h2 + ul {
+    background-color: red;
+}
+
+/* Give visited link green */
+a:visited{
+    color: green;
+}
+a:link{
+    color: white;
+}
+/* :visited{
+    color: green;
+} */
+
+/* Add any animation to <h1> (try the new one not same as the example) */
+#head1 {
+    width: 100;
+}
+header div{
+    width: 200px;
+}
+h1 {
+    animation-name: animate;
+    color: blue;
+    -webkit-text-stroke: 0.3vw blue;
+    position: absolute;
+}
+h1::before {
+    content: attr(data-text);
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #01fe87;
+    -webkit-text-stroke: 0vw blue;
+    border-right: 2px solid #01fe87;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+    position: absolute;
+}
+@keyframes animate{
+    0%,10%,100%{
+        width: 0;
+    }
+    70%,90%
+    {
+        width: 100%;
+    }
+}
+
